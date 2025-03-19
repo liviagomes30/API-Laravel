@@ -1,6 +1,6 @@
 # 🛠️ API de Catálogo de Produtos (Laravel 10+)
 
-Bem-vindo ao projeto **API de Catálogo de Produtos** desenvolvido em Laravel 10. Esta API permite gerenciar produtos com funcionalidades CRUD, autenticação via Sanctum, paginação, filtros e testes automatizados.
+Bem-vindo(a) ao projeto **API de Catálogo de Produtos** desenvolvido em Laravel 10. Esta API permite gerenciar produtos com funcionalidades CRUD, autenticação via Sanctum, paginação, filtros e testes automatizados.
 
 ## 📌 Funcionalidades
 
@@ -135,6 +135,24 @@ Authorization: Bearer seu-token-aqui
 GET http://127.0.0.1:8000/api/produtos?per_page=5&nome=notebook
 ```
 
+### 🔹 **Testando paginação**
+
+A API suporta paginação. Para definir o número de itens por página, use o parâmetro `per_page`. Exemplo:
+
+```http
+GET http://127.0.0.1:8000/api/produtos?per_page=10
+```
+
+Isso retornará **10 produtos por página**.
+
+Se houver muitas páginas, você pode navegar entre elas com:
+
+```http
+GET http://127.0.0.1:8000/api/produtos?page=2&per_page=5
+```
+
+Isso buscará a **segunda página** com 5 produtos por página.
+
 ### 🔹 **Criar um novo produto**
 
 ```http
@@ -212,4 +230,5 @@ Agora você tem uma API Laravel 100% funcional com CRUD, autenticação, pagina�
 
 ---
 
-\*\*Desenvolvido por \*\*[**Lívia Gomes de Souza**](https://https://github.com/liviagomes30) 👨‍💻
+**Desenvolvido por [Lívia Gomes de Souza](https://github.com/liviagomes30)** 👨‍💻
+
